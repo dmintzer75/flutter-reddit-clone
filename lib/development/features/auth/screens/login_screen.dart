@@ -1,6 +1,7 @@
 // ignore_for_file: avoid_unnecessary_containers
 
 import 'package:flutter/material.dart';
+import 'package:flutter_reddit_clone/development/theme/pallette.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_reddit_clone/development/constants/assets.dart';
 import 'package:flutter_reddit_clone/development/features/auth/controller/auth_controller.dart';
@@ -34,20 +35,33 @@ class LoginScreen extends ConsumerWidget {
           ? const Loader()
           : Column(
               crossAxisAlignment: CrossAxisAlignment.center,
+              mainAxisAlignment: MainAxisAlignment.start,
               children: [
-                const SizedBox(height: 30),
+                const SizedBox(height: 80),
                 Text(
-                  'Dive into anything',
-                  style: CustomStyles.kHeadlineSmall,
+                  "Reddit Clone",
+                  style: CustomStyles.kHeadlineSmall
+                      .copyWith(color: Pallete.orangeColor, fontSize: 16),
                 ),
-                const SizedBox(height: 30),
-                Padding(
-                  padding: const EdgeInsets.all(10.0),
+                Text(
+                  'Ride into anything',
+                  style: CustomStyles.kHeadlineMedium,
+                ),
+                const SizedBox(height: 40),
+                Container(
+                  height: 300,
+                  padding:
+                      const EdgeInsets.symmetric(horizontal: 20, vertical: 40),
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(70),
+                    color: Pallete.orangeColor,
+                  ),
                   child: Image.asset(
-                    Assets.assetsImagesLoginEmote,
+                    Assets.assetsImagesLogoDragon,
                     height: 400,
                   ),
                 ),
+                const SizedBox(height: 40),
                 const SignInButton()
               ],
             ),

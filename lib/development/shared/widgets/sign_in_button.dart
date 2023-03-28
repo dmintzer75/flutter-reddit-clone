@@ -25,13 +25,14 @@ class SignInButton extends ConsumerWidget {
         ),
         label: Text(
           "Continue with Google",
-          style: CustomStyles.kTitleMedium,
+          style: CustomStyles.kTitleMedium.copyWith(color: Pallete.whiteColor),
         ),
         style: ElevatedButton.styleFrom(
           backgroundColor: Pallete.greyColor,
           minimumSize: const Size(double.infinity, 50),
-          shape:
-              RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(10),
+          ),
         ),
       ),
     );

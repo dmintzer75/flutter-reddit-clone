@@ -45,6 +45,8 @@ dependencies:
   fpdart: ^0.5.0
   routemaster: ^1.0.1
   dio: ^5.1.0
+  animate_do: ^3.0.2
+  shared_preferences: ^2.0.20
 
 dev_dependencies:
   flutter_test:

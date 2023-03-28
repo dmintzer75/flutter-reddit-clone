@@ -45,7 +45,7 @@ class _MyAppState extends ConsumerState<MyApp> {
           data: (data) => MaterialApp.router(
             title: "Flutter Reddit Clone",
             debugShowCheckedModeBanner: false,
-            theme: Pallete.darkModeAppTheme,
+            theme: Pallete.lightModeAppTheme,
             routerDelegate: RoutemasterDelegate(
               routesBuilder: (context) {
                 if (data != null) {
