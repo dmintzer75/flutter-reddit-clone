@@ -3,6 +3,7 @@ import 'package:flutter_reddit_clone/development/features/auth/controller/auth_c
 import 'package:flutter_reddit_clone/development/theme/custom_styles.dart';
 import 'package:flutter_reddit_clone/development/theme/pallette.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 class ProfileDrawer extends ConsumerWidget {
   const ProfileDrawer({super.key});
@@ -15,6 +16,12 @@ class ProfileDrawer extends ConsumerWidget {
       ref.read(authControllerProvider.notifier).logout();
     }
 
+    void toggleTheme(WidgetRef ref) {
+      ref.read(themeNotifierProvider.notifier).toggleTheme();
+    }
+
+    bool isLightMode =
+        ref.watch(themeNotifierProvider.notifier).mode == ThemeMode.light;
     return SafeArea(
       bottom: false,
       child: Drawer(
@@ -69,9 +76,14 @@ class ProfileDrawer extends ConsumerWidget {
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
+                  isLightMode
+                      ? const Text('Light Mode Active')
+                      : const Text('Dark Mode Active'),
+                  const SizedBox(width: 10),
                   Switch.adaptive(
-                    value: true,
-                    onChanged: (value) {},
+                    value: ref.watch(themeNotifierProvider.notifier).mode ==
+                        ThemeMode.light,
+                    onChanged: (value) => toggleTheme(ref),
                   ),
                 ],
               )
