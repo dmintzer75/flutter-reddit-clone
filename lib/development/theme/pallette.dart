@@ -48,7 +48,7 @@ class Pallete {
       ),
     ),
     drawerTheme: const DrawerThemeData(
-      backgroundColor: whiteColor,
+      backgroundColor: Color(0xffF2F2F2),
     ),
     primaryColor: redColor,
   );

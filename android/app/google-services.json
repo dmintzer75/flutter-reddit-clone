@@ -9,7 +9,7 @@
       "client_info": {
         "mobilesdk_app_id": "1:1066365657948:android:707d21f708d3c1479d9799",
         "android_client_info": {
-          "package_name": "com.example.flutter_reddit_clone"
+          "package_name": "com.example.flutter_reddit_clone.dev"
         }
       },
       "oauth_client": [
@@ -17,7 +17,7 @@
           "client_id": "1066365657948-sbrmnl0jlscqcmtgo9kkp4hmamknkgp3.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
-            "package_name": "com.example.flutter_reddit_clone",
+            "package_name": "com.example.flutter_reddit_clone.dev",
             "certificate_hash": "a2f3d6313552cdd8ea2a4cddf9c1d5edf68e9f87"
           }
         },
