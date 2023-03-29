@@ -84,7 +84,6 @@ class Subreddit {
     required this.authorIsBlocked,
     this.modReasonBy,
     this.removalReason,
-    required this.linkFlairBackgroundColor,
     required this.id,
     required this.isRobotIndexable,
     this.reportReasons,
@@ -195,7 +194,7 @@ class Subreddit {
   final bool authorIsBlocked;
   final dynamic modReasonBy;
   final dynamic removalReason;
-  final String linkFlairBackgroundColor;
+
   final String id;
   final bool isRobotIndexable;
   final dynamic reportReasons;
@@ -307,7 +306,7 @@ class Subreddit {
         authorIsBlocked: json["author_is_blocked"],
         modReasonBy: json["mod_reason_by"],
         removalReason: json["removal_reason"],
-        linkFlairBackgroundColor: json["link_flair_background_color"],
+        // linkFlairBackgroundColor: json["link_flair_background_color"],
         id: json["id"],
         isRobotIndexable: json["is_robot_indexable"],
         reportReasons: json["report_reasons"],
@@ -420,7 +419,6 @@ class Subreddit {
         "author_is_blocked": authorIsBlocked,
         "mod_reason_by": modReasonBy,
         "removal_reason": removalReason,
-        "link_flair_background_color": linkFlairBackgroundColor,
         "id": id,
         "is_robot_indexable": isRobotIndexable,
         "report_reasons": reportReasons,

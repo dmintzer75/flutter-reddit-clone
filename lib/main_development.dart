@@ -10,6 +10,7 @@ void main() async {
   await Firebase.initializeApp(
     options: DefaultFirebaseOptions.currentPlatform,
   );
+  await Future.delayed(Duration(seconds: 3));
   runApp(
     const App(flavor: 'Development'),
   );

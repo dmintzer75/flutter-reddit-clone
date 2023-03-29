@@ -65,6 +65,7 @@ class _FeedScreenState extends ConsumerState<FeedScreen> {
             foregroundColor: Pallete.whiteColor,
             onPressed: () {
               subsFuture = getSubs();
+              setState(() {});
             },
             child: const Icon(Icons.refresh),
           ),

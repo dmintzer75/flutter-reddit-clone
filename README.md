@@ -78,6 +78,11 @@ To use the mobile version you need to have at least one of this installed:
    ```
    The app should take a few minutes to install and run.
 
+5. To run a specific flavor/schema, just use the following code in terminal:
+    ```sh
+   flutter run --flavor development --target lib/main_development.dart
+    ```
+
 ## Features
 
 The app is very simple, with only a few features: 

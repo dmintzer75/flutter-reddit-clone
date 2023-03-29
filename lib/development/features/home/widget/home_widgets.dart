@@ -11,21 +11,36 @@ class HomeWidgets {
   }
 
   static Widget refreshIndicator() {
-    return Column(
-      crossAxisAlignment: CrossAxisAlignment.center,
-      children: [
-        Text(
-          "Welcome to the clone of clones!",
-          style: CustomStyles.kHeadlineSmall
-              .copyWith(color: Pallete.orangeColor, fontSize: 20),
+    return Center(
+      child: Container(
+        height: 200,
+        padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 40),
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(10),
+          color: Pallete.orangeColor,
+          boxShadow: const [
+            BoxShadow(
+                color: Colors.black12, offset: Offset(0, 4), blurRadius: 16)
+          ],
         ),
-        const SizedBox(height: 20),
-        Text(
-          'Tap on the refresh button to get the latest subs...',
-          style: CustomStyles.kHeadlineSmall
-              .copyWith(color: Pallete.orangeColor, fontSize: 16),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: [
+            Text(
+              "Welcome to the clone of clones!",
+              style: CustomStyles.kHeadlineSmall
+                  .copyWith(color: Pallete.whiteColor, fontSize: 20),
+            ),
+            const SizedBox(height: 20),
+            Text(
+              'Tap on the refresh button to get the latest subs...',
+              style: CustomStyles.kHeadlineSmall
+                  .copyWith(color: Pallete.whiteColor, fontSize: 16),
+            ),
+          ],
         ),
-      ],
+      ),
     );
   }
 
